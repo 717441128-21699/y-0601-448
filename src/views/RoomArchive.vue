@@ -39,7 +39,7 @@
     <div class="card-section">
       <div class="section-title" style="display: flex; justify-content: space-between; align-items: center;">
         <span>钥匙管理</span>
-        <el-button type="primary" size="small" @click="showKeyDialog = true">
+        <el-button type="primary" size="small" @click="openAddKeyDialog">
           <el-icon><Plus /></el-icon>
           添加
         </el-button>
@@ -66,7 +66,7 @@
     <div class="card-section">
       <div class="section-title" style="display: flex; justify-content: space-between; align-items: center;">
         <span>门禁卡管理</span>
-        <el-button type="primary" size="small" @click="showCardDialog = true">
+        <el-button type="primary" size="small" @click="openAddCardDialog">
           <el-icon><Plus /></el-icon>
           添加
         </el-button>

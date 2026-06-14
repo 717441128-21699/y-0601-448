@@ -4,6 +4,8 @@ const fs = require('fs')
 
 let mainWindow
 
+const isDev = process.argv.includes('--dev') || process.env.NODE_ENV === 'development'
+
 function createWindow() {
   mainWindow = new BrowserWindow({
     width: 1280,
@@ -18,7 +20,7 @@ function createWindow() {
     }
   })
 
-  if (process.env.NODE_ENV === 'development') {
+  if (isDev) {
     mainWindow.loadURL('http://localhost:5173')
     mainWindow.webContents.openDevTools()
   } else {
